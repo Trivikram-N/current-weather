@@ -1,0 +1,191 @@
+
+*{
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, .8);
+    font-family: "Sora", sans-serif;
+}
+
+
+/* layouts */
+.container{
+    height: 100vh;
+    background: no-repeat center;
+    background-size: cover;
+    background-image: url(assets/background-images/day.png);
+
+    transition: background-image 0.8s;
+}
+
+.wrapper{
+    height: 100%;
+    background-color:  rgba(0, 0, 0, .5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    flex-direction: column;
+
+    position: relative;
+}
+
+
+/* error box */
+.error{
+    padding: .5rem;
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-family: "Comfortaa", sans-serif;
+    width: 60%;
+    max-width: 480px;
+
+    position: absolute;
+    top: 4%;
+    left: center;
+
+    display: none;
+}
+
+
+/* search box styling */
+.search-div{
+    display: flex;
+    align-items: center;
+    padding: .8rem;
+    gap: 8px;
+
+    width: 48%;
+    max-width: 480px;
+}
+
+.search-box {
+    width: 100%;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 300;
+    background-color: transparent;
+
+    text-shadow: none;
+    border: none;
+    outline: none;
+    cursor: default;
+}
+
+.search-box::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* weather data box */
+.main-box{
+    padding: 1.5rem;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temperature-div{
+    display: flex;
+    gap: 16px;
+
+    margin-top: 32px;
+}
+
+.temperature-in-F, .temperature-in-C{
+    font-size: 3rem;
+}
+
+sup{
+    font-size: 1.6rem;
+}
+
+.v-line{
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    transform: rotate(24deg);
+}
+
+
+/* weather image */
+.weather-icon{
+    margin: 2rem 0;
+    width: 8rem;
+
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, .8));
+}
+
+.hr-line{
+    width: 100%;
+    margin: 20px 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+/* extra data div */
+.extra-info{
+    display: flex;
+}
+
+.vr-line{
+    margin: 0 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.wind-speed-data, .humidity-data{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    margin-top: 12px;
+    font-size: 2rem;
+}
+
+.humidity-icon, .wind-speed-icon{
+    width: 1.5rem;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, .8));
+}
+
+sub{
+    font-size: 1rem;
+}
+
+
+
+/* ------ other effect ------- */
+
+.glass-effect{
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15); 
+
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.temperature-style, sub, sup{
+    color: orange;
+
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 100;
+}
+
+
+
+/* ------- for small screens ------- */
+
+@media(max-width: 500px){
+    .search-box{
+        font-size: 1rem;
+    }
+    .error{
+        font-size: .8rem;
+    }
+    .search-div{
+        width:88%;
+    }
+}

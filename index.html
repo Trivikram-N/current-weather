@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Weather</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <section class="container">
+        <div class="wrapper">
+
+            <!-- error messeage -->
+            <div class="error glass-effect">Error - check your location name / internet connection</div>
+
+            <!-- search bar -->
+            <label class="search-div glass-effect">
+                <img src="assets/icons/search.svg" alt="search icon" class="search-icon">
+                <input type="text" class="search-box" placeholder="Enter your location">
+            </label>
+
+            <!-- main data box -->
+            <div class="main-box glass-effect">
+
+                <p class="location">No internet connection</p>
+                <div class="temperature-div">
+                    <h1 class="temperature-in-F temperature-style">45<sup>°F</sup></h1>
+                    <div class="v-line"></div>
+                    <h1 class="temperature-in-C temperature-style">45<sup>°C</sup></h1>
+                </div>
+
+                <img src="assets/weather-icons/02.png" alt="This is a sample image" class="weather-icon">
+                <p class="description">Can't fetch data</p>
+
+                <div class="hr-line"></div>
+
+                <!-- humidity and wind-speed -->
+                <div class="extra-info">
+
+                    <div>
+                        <p>Humidity</p>
+                        <div class="humidity-data">
+                            <img src="assets/icons/humidity.png" alt="humidity icon" class="humidity-icon">
+                            <p class="humidity temperature-style">45<sub>%</sub></p>
+                        </div>
+                    </div>
+                    <div class="vr-line"></div>
+                    <div>
+                        <p>Wind speed</p>
+                        <div class="wind-speed-data">
+                            <img src="assets/icons/wind-speed.png" alt="wind speed icon" class="wind-speed-icon">
+                            <p class="wind-speed temperature-style">45<sub>km/h</sub></p>
+                        </div>
+                    </div>
+
+                </div>
+              
+            </div>
+            
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
